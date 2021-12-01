@@ -1,0 +1,8 @@
+---
+  - hosts: remote
+    
+    tasks:
+      - name: make a folder 
+        file:
+          path: /home/ivan2/Desktop/-test66
+          state: directory
