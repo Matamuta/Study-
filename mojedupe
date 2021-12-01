@@ -5,6 +5,11 @@ pipeline {
             steps {
                 script {
                     sh 'ls'
+                    ansiblePlaybook(
+                        playbook: 'test66.yml',
+                        inventory: 'inventory/inventar',
+                        credentialsId: 'test-ssh'
+                    )
                 }
             }
     
