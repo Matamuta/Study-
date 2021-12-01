@@ -8,7 +8,10 @@ pipeline {
                     ansiblePlaybook(
                         playbook: 'test66.yml',
                         inventory: 'inventory/inventar',
-                        credentialsId: 'test-ssh'
+                        credentialsId: 'test-ssh',
+                        become: true,
+                        becomeUser: 'ivan2'
+                
                     )
                 }
             }
